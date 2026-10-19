@@ -1,0 +1,32 @@
+.qcols{counter-reset:q;gap:16px}
+.qbox{counter-increment:q;position:relative;overflow:hidden;isolation:isolate;min-height:250px;padding:1.7rem 1.7rem 5rem;border-radius:28px;align-content:start;gap:.7rem;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.qbox .lines{display:none!important}
+.qbox:before{content:"0" counter(q);position:absolute;right:1.3rem;top:.2rem;font-size:5.6rem;font-weight:700;letter-spacing:-.05em;line-height:1;color:currentColor;opacity:.09;z-index:-1;transition:transform .7s var(--ease),opacity .5s}
+.qbox:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .45s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgb(255 255 255/.22),transparent 60%)}
+.qbox:nth-child(3n):after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgb(211 32 47/.12),transparent 60%)}
+.qbox:hover:after{opacity:1}
+.qbox:hover:before{transform:translate(-8px,10px) scale(1.12);opacity:.16}
+.qbox:hover{transform:translateY(-8px);box-shadow:0 34px 60px -34px rgb(16 18 20/.6)}
+.qbox h3{font-size:clamp(1.35rem,1.2rem + .5vw,1.65rem);letter-spacing:-.02em;position:relative;padding-bottom:.9rem}
+.qbox h3:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:34px;border-radius:2px;background:currentColor;opacity:.5;transition:width .7s var(--ease),background .4s,opacity .4s}
+.qbox:hover h3:after{width:100%;opacity:.9}
+.qbox:nth-child(3n) h3:after{background:var(--red)}
+.qbox p{font-size:.98rem;line-height:1.55;opacity:.82;max-width:34ch}
+.qbox p:after{content:"\2192";position:absolute;right:1.4rem;bottom:1.4rem;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.15rem;background:rgb(255 255 255/.14);border:1px solid rgb(255 255 255/.28);transition:transform .6s var(--ease),background .4s,color .4s}
+.qbox:nth-child(3n) p:after{background:var(--chip);border-color:transparent;color:var(--red)}
+.qbox:hover p:after{transform:rotate(-45deg) scale(1.1);background:#fff;color:var(--red)}
+.qbox:nth-child(3n):hover p:after{background:var(--red);color:#fff}
+.qbox[data-rv].pre{opacity:0;transform:translateY(46px) scale(.96);clip-path:inset(0 0 14% 0 round 28px)}
+.qbox[data-rv]{transition:opacity .9s var(--ease) calc(var(--d,0)*120ms),transform .9s var(--ease) calc(var(--d,0)*120ms),clip-path 1s var(--ease) calc(var(--d,0)*120ms),box-shadow .6s var(--ease)}
+.qbox[data-rv]:not(.pre):hover{transition-delay:0s}
+@media(max-width:700px){.qbox{min-height:200px;padding-bottom:4.6rem}.qbox:before{font-size:4.4rem}}
+@media(prefers-reduced-motion:reduce){.qbox,.qbox:before,.qbox h3:after,.qbox p:after{transition:none!important}}
+
+.card .pic:before{content:"";position:absolute;inset:0;background:center 22%/cover no-repeat;opacity:0;transition:transform .9s var(--ease),opacity .6s}
+html.a-hm1 .card .pic:has(img[alt^="Linha Casa"]):before{background-image:var(--a-hm1);opacity:1}
+html.a-hm2 .card .pic:has(img[alt^="Kit Piscina"]):before{background-image:var(--a-hm2);opacity:1}
+html.a-hm3 .card .pic:has(img[alt^="Azophoska"]):before{background-image:var(--a-hm3);opacity:1}
+html.a-hm4 .card .pic:has(img[alt^="BEL Pro"]):before{background-image:var(--a-hm4);opacity:1}
+html.a-sod .card .pic:has(img[alt^="Sodabel"]):before{background-image:var(--a-sod);opacity:1;background-position:center}
+html.a-hm1 .card .pic img[alt^="Linha Casa"],html.a-hm2 .card .pic img[alt^="Kit Piscina"],html.a-hm3 .card .pic img[alt^="Azophoska"],html.a-hm4 .card .pic img[alt^="BEL Pro"],html.a-sod .card .pic img[alt^="Sodabel"]{opacity:0}
+.card:hover .pic:before{transform:scale(1.06)}
