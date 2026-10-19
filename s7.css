@@ -30,3 +30,5 @@ html.a-hm4 .card .pic:has(img[alt^="BEL Pro"]):before{background-image:var(--a-h
 html.a-sod .card .pic:has(img[alt^="Sodabel"]):before{background-image:var(--a-sod);opacity:1;background-position:center}
 html.a-hm1 .card .pic img[alt^="Linha Casa"],html.a-hm2 .card .pic img[alt^="Kit Piscina"],html.a-hm3 .card .pic img[alt^="Azophoska"],html.a-hm4 .card .pic img[alt^="BEL Pro"],html.a-sod .card .pic img[alt^="Sodabel"]{opacity:0}
 .card:hover .pic:before{transform:scale(1.06)}
+
+@media(min-width:701px){.hero .tabs{flex-wrap:nowrap;max-width:none;justify-content:flex-end}.hero .tabs .tab{white-space:nowrap;flex:0 0 auto}}
