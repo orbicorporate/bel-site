@@ -32,3 +32,5 @@ html.a-hm1 .card .pic img[alt^="Linha Casa"],html.a-hm2 .card .pic img[alt^="Kit
 .card:hover .pic:before{transform:scale(1.06)}
 
 @media(min-width:701px){.hero .tabs{flex-wrap:nowrap;max-width:none;justify-content:flex-end}.hero .tabs .tab{white-space:nowrap;flex:0 0 auto}}
+
+.tabsrow .chipa,.tabsrow .chipg{cursor:pointer;transition:background .2s,color .2s;user-select:none}.tabsrow .chipg:hover{background:#e3e1da;color:var(--fg)}
