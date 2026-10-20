@@ -56,3 +56,21 @@
 .mcta p{color:#ffffffb3;font-size:.92rem;margin-top:.25rem}
 @media(max-width:900px){.mgrid{grid-template-columns:repeat(2,1fr)}.mfeat{grid-template-columns:1fr;min-height:360px}.mfeat:before{background:linear-gradient(0deg,#071a3ff5 0%,#0a2a63b3 55%,#0a2a6326 100%)}}
 @media(max-width:600px){.mgrid{grid-template-columns:1fr}.msearch,.msearch input{width:100%}.mchips{flex-wrap:nowrap;overflow-x:auto;max-width:100%;scrollbar-width:none;padding-bottom:2px}.mchips::-webkit-scrollbar{display:none}.mchip{white-space:nowrap}}
+
+/* Menu Produtos: tiles sem produto, com degradê e linhas */
+.mega .mg{position:relative;isolation:isolate;min-height:176px;padding:16px 16px 15px;border-radius:20px;align-content:end;gap:0;overflow:hidden;background:var(--mgb)}
+.mega .mg img{display:none}
+.mega .mg:before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(118deg,#ffffff00 0 13px,#ffffff1f 13px 14px);-webkit-mask-image:linear-gradient(200deg,#000 10%,#0000 75%);mask-image:linear-gradient(200deg,#000 10%,#0000 75%);transition:transform .9s var(--ease)}
+.mega .mg:after{content:"";position:absolute;right:-34%;top:-30%;width:92%;aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(circle,#0000 0 34%,#ffffff26 34.5% 35.5%,#0000 36% 48%,#ffffff1c 48.5% 49.5%,#0000 50% 62%,#ffffff14 62.5% 63.5%,#0000 64%),radial-gradient(circle at 40% 40%,#ffffff2e,#0000 60%);transition:transform 1s var(--ease)}
+.mega .mg:hover:before{transform:translate(-10px,6px)}
+.mega .mg:hover:after{transform:scale(1.14) rotate(14deg)}
+.mega .mg div{display:grid;gap:.15rem}
+.mega .mg b{font-size:1.32rem;font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.mega .mg b:before{content:"";display:block;width:26px;height:2px;background:#fff;margin-bottom:.7rem;opacity:.85;transition:width .5s var(--ease)}
+.mega .mg:hover b:before{width:46px}
+.mega .mg br{display:none}
+.mega .mg span{font-size:.8rem;opacity:.88}
+.mega .mg.f-lar{--mgb:linear-gradient(155deg,#e2323f 0%,#b11a28 55%,#6d0f1b 100%)}
+.mega .mg.f-pisc{--mgb:linear-gradient(155deg,#2f8fe6 0%,#0b64c0 52%,#0a2f6e 100%)}
+.mega .mg.f-jar{--mgb:linear-gradient(155deg,#49a53f 0%,#2a7a28 55%,#14461a 100%)}
+.mega .mg.f-pro{--mgb:linear-gradient(155deg,#34507d 0%,#1c2f4d 55%,#0b1425 100%)}
