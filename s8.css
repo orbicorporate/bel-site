@@ -60,10 +60,12 @@
 /* Menu Produtos: tiles sem produto, com degradê e linhas */
 .mega .mg{position:relative;isolation:isolate;min-height:176px;padding:16px 16px 15px;border-radius:20px;align-content:end;gap:0;overflow:hidden;background:var(--mgb)}
 .mega .mg img{display:none}
-.mega .mg:before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(118deg,#ffffff00 0 13px,#ffffff1f 13px 14px);-webkit-mask-image:linear-gradient(200deg,#000 10%,#0000 75%);mask-image:linear-gradient(200deg,#000 10%,#0000 75%);transition:transform .9s var(--ease)}
-.mega .mg:after{content:"";position:absolute;right:-34%;top:-30%;width:92%;aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(circle,#0000 0 34%,#ffffff26 34.5% 35.5%,#0000 36% 48%,#ffffff1c 48.5% 49.5%,#0000 50% 62%,#ffffff14 62.5% 63.5%,#0000 64%),radial-gradient(circle at 40% 40%,#ffffff2e,#0000 60%);transition:transform 1s var(--ease)}
-.mega .mg:hover:before{transform:translate(-10px,6px)}
-.mega .mg:hover:after{transform:scale(1.14) rotate(14deg)}
+.mega .mg:before{content:"";position:absolute;inset:-30%;z-index:-2;transform:rotate(-9deg);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='96' viewBox='0 0 160 96' fill='none' stroke='white' stroke-width='1.3'%3E%3Cpath stroke-opacity='.34' d='M0 14Q20 2 40 14T80 14T120 14T160 14'/%3E%3Cpath stroke-opacity='.24' d='M0 46Q20 34 40 46T80 46T120 46T160 46'/%3E%3Cpath stroke-opacity='.16' d='M0 78Q20 66 40 78T80 78T120 78T160 78'/%3E%3C/svg%3E") 0 0/160px 96px repeat;-webkit-mask-image:linear-gradient(205deg,#000 5%,#0000 70%);mask-image:linear-gradient(205deg,#000 5%,#0000 70%);animation:mgw 16s linear infinite}
+.mega .mg:after{content:"";position:absolute;right:-30%;top:-34%;width:90%;aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(circle at 42% 42%,#ffffff40,#ffffff12 38%,#0000 64%);transition:transform 1s var(--ease)}
+.mega .mg:hover:before{animation-duration:6s}
+.mega .mg:hover:after{transform:scale(1.18)}
+@keyframes mgw{to{background-position:160px 0}}
+@media(prefers-reduced-motion:reduce){.mega .mg:before{animation:none}}
 .mega .mg div{display:grid;gap:.15rem}
 .mega .mg b{font-size:1.32rem;font-weight:500;letter-spacing:-.02em;line-height:1.05}
 .mega .mg b:before{content:"";display:block;width:26px;height:2px;background:#fff;margin-bottom:.7rem;opacity:.85;transition:width .5s var(--ease)}
@@ -74,3 +76,10 @@
 .mega .mg.f-pisc{--mgb:linear-gradient(155deg,#2f8fe6 0%,#0b64c0 52%,#0a2f6e 100%)}
 .mega .mg.f-jar{--mgb:linear-gradient(155deg,#49a53f 0%,#2a7a28 55%,#14461a 100%)}
 .mega .mg.f-pro{--mgb:linear-gradient(155deg,#34507d 0%,#1c2f4d 55%,#0b1425 100%)}
+
+.mega .mg span{min-height:2.4em}
+.mega .mfoot{gap:.5rem;padding:.65rem .15rem .1rem}
+.mega .mfoot a{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft);color:var(--fg);padding:.5rem 1rem .5rem .85rem;border-radius:999px;font-size:.82rem;font-weight:500;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.mega .mfoot a:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);transition:background .3s}
+.mega .mfoot a:hover{background:#111312;color:#fff;border-color:#111312;transform:translateY(-2px)}
+.mega .mfoot a:hover:before{background:#fff}
